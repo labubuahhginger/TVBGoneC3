@@ -10,12 +10,11 @@ IRsend irsend(IR_PIN);
 
 // Samsung
 void sendSamsung() {
-  // Power toggle
   irsend.sendSAMSUNG(0xE0E040BF); delay(50);
   irsend.sendSAMSUNG(0xE0E040BF); delay(50);
   // Samsung Series 6+
   irsend.sendSAMSUNG(0xE0E019E6); delay(50);
-  // Samsung old
+  // Samsung старые модели
   irsend.sendSAMSUNG(0xE0E0F00F); delay(50);
 }
 
