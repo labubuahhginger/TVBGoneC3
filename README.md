@@ -1,101 +1,138 @@
-# 📺 TV-B-Gone ESP32-C3 SuperMini
+```
+   _____ __   _     ______  ______               
+  / ___// /__(_)___/ / __ )/ ____/___  ____  ___ 
+  \__ \/ //_/ / __  / __  / / __/ __ \/ __ \/ _ \
+ ___/ / ,< / / /_/ / /_/ / /_/ / /_/ / / / /  __/
+/____/_/|_/_/\__,_/_____/\____/\____/_/ /_/\___/
 
-Устройство для выключения телевизоров и проекторов по IR. Основано на ESP32-C3 SuperMini + IR transmitter модуль (3 пина).
+        ( o  o )  < Skiddy can't wait to turn off everything. >
+         (  v  )
+        /|     |\
+        _|_____|_
+```
+
+# SkidBGone 📺💀
+
+> *"Every TV in the room. Every projector in the school. Every smart board in the hallway. Skiddy don't care."*
+
+**SkidBGone** is a TV-B-Gone firmware for the ESP32-C3 SuperMini. One button press and Skiddy goes to work — blasting IR codes at everything in sight.
 
 ![CI](https://github.com/labubuahhginger/TVBGoneC3/actions/workflows/build.yml/badge.svg)
+![Platform](https://img.shields.io/badge/platform-ESP32--C3-red)
+![Framework](https://img.shields.io/badge/framework-Arduino-blue)
+![Skiddy](https://img.shields.io/badge/mascot-Skiddy-purple)
 
 ---
 
-## 🔧 Железо
-
-| Компонент | Описание |
-|-----------|----------|
-| ESP32-C3 SuperMini | Основная плата |
-| IR Transmitter (3-pin) | Модуль с встроенным транзистором |
-
-### Подключение
+## 🐛 Meet Skiddy
 
 ```
-IR Transmitter → ESP32-C3 SuperMini
-VCC  → 3.3V
-GND  → GND
-DAT  → GPIO3
+    ( o  o )
+     (  v  )     Skiddy is a little guy who walks around
+    /|     |\    and turns off every screen he sees.
+    _|_____|_    Nobody is safe. Not even the projector
+                 in the back of the classroom.
 ```
 
-Кнопка запуска — встроенная **BOOT** (GPIO9).  
-Индикатор — встроенный **LED** (GPIO8).
+Skiddy is the official mascot of SkidBGone. He doesn't know what mercy is.
 
 ---
 
-## 📡 Поддерживаемые протоколы
+## ⚡ What it does
 
-- NEC
-- SIRC (Sony) — 12 / 15 / 20 бит
-- RC5 (Philips)
-- JVC
-- Panasonic
+Skiddy sends IR power-off codes to **30+ devices** — TVs, projectors, smart boards — one by one, until the room goes dark.
+
+> *"Skiddy done it's job."*
 
 ---
 
-## 📺 Поддерживаемые устройства
+## 🔧 Hardware
 
-**Телевизоры:** Samsung, LG, Sony, Philips, Panasonic, Sharp, Toshiba, Hitachi, Hisense, TCL, Vizio, JVC, Mitsubishi, Vestel, Beko
+| Part | Info |
+|------|------|
+| ESP32-C3 SuperMini | Main board |
+| IR Transmitter (3-pin) | Has built-in transistor, plug and play |
 
-**Проекторы:** BenQ, Epson, Optoma, ViewSonic, Acer, Infocus, NEC, Panasonic, Sony VPL, Casio
+### Wiring
+
+```
+IR Transmitter  →  ESP32-C3 SuperMini
+VCC             →  3.3V
+GND             →  GND
+DAT             →  GPIO3
+```
+
+- **Trigger:** BOOT button (GPIO9)
+- **LED indicator:** Built-in (GPIO8) — glows while Skiddy is working
 
 ---
 
-## 🚀 Сборка и прошивка
+## 📡 Protocols
 
-### Требования
+`NEC` `SIRC 12/15/20-bit` `RC5` `RC6` `JVC` `Panasonic`
 
-- [PlatformIO](https://platformio.org/)
-- VS Code + PlatformIO IDE расширение
+---
 
-### Сборка
+## 📺 Supported Devices
+
+**TVs**
+Samsung · LG · Sony · Philips · Panasonic · Sharp · Toshiba · Hitachi · Hisense · TCL · Vizio · JVC · Mitsubishi · Vestel · Beko
+
+**Projectors**
+BenQ · Epson · Optoma · ViewSonic · Acer · Infocus · NEC · Panasonic · Sony VPL · Casio · Sanyo · Mitsubishi · Hitachi · Dell · Ricoh
+
+**Pro Displays & Smart Boards**
+Barco · Christie · Canon · SMART Board · Promethean · NexTouch *(experimental)*
+
+---
+
+## 🚀 Build & Flash
 
 ```bash
+# Build
 pio run
-```
 
-### Прошивка
-
-```bash
+# Flash
 pio run -t upload
-```
 
-### Монитор порта
-
-```bash
+# Serial monitor (watch Skiddy work)
 pio device monitor
 ```
 
 ---
 
-## ▶️ Использование
+## ▶️ Usage
 
-1. Прошей ESP32-C3
-2. Нажми кнопку **BOOT**
-3. LED загорится — устройство отправляет IR коды
-4. LED погаснет — готово
+1. Flash the firmware
+2. Press **BOOT**
+3. LED turns on — Skiddy is unleashed
+4. LED turns off — Skiddy is done
+5. Check Serial Monitor for the full play-by-play
 
 ---
 
-## 📁 Структура проекта
+## 📁 Project Structure
 
 ```
-TVBGoneC3/
+SkidBGone/
 ├── src/
-│   └── main.cpp
+│   └── main.cpp        # Skiddy lives here
 ├── .github/
 │   └── workflows/
-│       └── build.yml
+│       └── build.yml   # CI — makes sure Skiddy compiles
 ├── platformio.ini
 └── README.md
 ```
 
 ---
 
-## 📜 Лицензия
+## ⚠️ Disclaimer
 
-MIT
+This project is for **educational purposes** and **your own devices only**.  
+Don't let Skiddy loose in public. He has no chill.
+
+---
+
+## 📜 License
+
+MIT — Skiddy is free.
