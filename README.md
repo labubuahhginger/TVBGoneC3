@@ -20,7 +20,6 @@
 ![CI](https://github.com/labubuahhginger/SkidBGone/actions/workflows/build.yml/badge.svg)
 ![Platform](https://img.shields.io/badge/platform-ESP32--C3-red)
 ![Framework](https://img.shields.io/badge/framework-Arduino-blue)
-![Skiddy](https://img.shields.io/badge/mascot-Skiddy-purple)
 
 ---
 
