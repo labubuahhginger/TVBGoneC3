@@ -66,7 +66,7 @@ One button press. Skiddy sends IR power-off codes to **35+ devices** — TVs, pr
 
 ```
 IR Transmitter  →  ESP32-C3 SuperMini
-VCC             →  3.3V
+VCC             →  5V
 GND             →  GND
 DAT             →  GPIO3
 ```

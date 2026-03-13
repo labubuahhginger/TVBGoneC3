@@ -66,7 +66,7 @@
 
 ```
 IR Передатчик   →  ESP32-C3 SuperMini
-VCC             →  3.3V
+VCC             →  5V
 GND             →  GND
 DAT             →  GPIO3
 ```

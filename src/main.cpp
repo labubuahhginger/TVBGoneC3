@@ -245,20 +245,20 @@ void sendAll() {
 
   Serial.println("Skiddy is turning off TVs... Every TV is cooked lol."); 
 
-  Serial.println("[TV 1/14] Samsung");      sendSamsung();           delay(300);
-  Serial.println("[TV 2/14] LG");           sendLG();                delay(300);
-  Serial.println("[TV 3/14] Sony TV");      sendSony();              delay(300);
-  Serial.println("[TV 4/14] Philips");      sendPhilips();           delay(300);
-  Serial.println("[TV 5/14] Panasonic TV"); sendPanasonic();         delay(300);
-  Serial.println("[TV 6/14] Sharp");        sendSharp();             delay(300);
-  Serial.println("[TV 7/14] Toshiba");      sendToshiba();           delay(300);
-  Serial.println("[TV 8/14] Hitachi TV");   sendHitachi();           delay(300);
-  Serial.println("[TV 9/14] Hisense");      sendHisense();           delay(300);
-  Serial.println("[TV 10/14] TCL");         sendTCL();               delay(300);
-  Serial.println("[TV 11/14] Vizio");       sendVizio();             delay(300);
-  Serial.println("[TV 12/14] JVC TV");      sendJVC();               delay(300);
-  Serial.println("[TV 13/14] Mitsubishi TV");sendMitsubishi();       delay(300);
-  Serial.println("[TV 14/14] Vestel/Beko"); sendVestel(); sendBeko();delay(300);
+  Serial.println("[1/14] Samsung");      sendSamsung();           delay(300);
+  Serial.println("[2/14] LG");           sendLG();                delay(300);
+  Serial.println("[3/14] Sony TV");      sendSony();              delay(300);
+  Serial.println("[4/14] Philips");      sendPhilips();           delay(300);
+  Serial.println("[5/14] Panasonic TV"); sendPanasonic();         delay(300);
+  Serial.println("[6/14] Sharp");        sendSharp();             delay(300);
+  Serial.println("[7/14] Toshiba");      sendToshiba();           delay(300);
+  Serial.println("[8/14] Hitachi TV");   sendHitachi();           delay(300);
+  Serial.println("[9/14] Hisense");      sendHisense();           delay(300);
+  Serial.println("[10/14] TCL");         sendTCL();               delay(300);
+  Serial.println("[11/14] Vizio");       sendVizio();             delay(300);
+  Serial.println("[12/14] JVC TV");      sendJVC();               delay(300);
+  Serial.println("[13/14] Mitsubishi TV");sendMitsubishi();       delay(300);
+  Serial.println("[14/14] Vestel/Beko"); sendVestel(); sendBeko();delay(300);
 
   Serial.println("Wtf projector are turned off, why? Skiddy turned it off bro.");
 
