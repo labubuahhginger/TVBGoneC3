@@ -205,6 +205,81 @@ void sendOnida() {
   irsend.sendNEC(0xF30CC03F, 32); delay(100);
 }
 
+void sendZenith() {
+  irsend.sendNEC(0x00FF40BF, 32); delay(100);
+  irsend.sendNEC(0x00FF40BF, 32); delay(100);
+}
+
+void sendElement() {
+  irsend.sendNEC(0xFB0440BF, 32); delay(100);
+  irsend.sendNEC(0xFB0440BF, 32); delay(100);
+}
+
+void sendSeiki() {
+  irsend.sendNEC(0x807F40BF, 32); delay(100);
+  irsend.sendNEC(0x807F40BF, 32); delay(100);
+}
+
+void sendWestinghouse() {
+  irsend.sendNEC(0x5EA140BF, 32); delay(100);
+  irsend.sendNEC(0x5EA140BF, 32); delay(100);
+}
+
+void sendSylvania() {
+  irsend.sendNEC(0x00FF807F, 32); delay(100);
+  irsend.sendNEC(0x00FF807F, 32); delay(100);
+}
+
+void sendPioneer() {
+  irsend.sendNEC(0xAA5540BF, 32); delay(100);
+  irsend.sendNEC(0xAA5540BF, 32); delay(100);
+}
+
+void sendRCA() {
+  irsend.sendNEC(0x01FE40BF, 32); delay(100);
+  irsend.sendNEC(0x01FE40BF, 32); delay(100);
+}
+
+void sendOrion() {
+  irsend.sendNEC(0x02FD40BF, 32); delay(100);
+  irsend.sendNEC(0x02FD40BF, 32); delay(100);
+}
+
+void sendBPL() {
+  irsend.sendNEC(0x04FB40BF, 32); delay(100);
+  irsend.sendNEC(0x04FB40BF, 32); delay(100);
+}
+
+void sendVideocon() {
+  irsend.sendNEC(0x1CE340BF, 32); delay(100);
+  irsend.sendNEC(0x1CE340BF, 32); delay(100);
+}
+
+void sendMicromax() {
+  irsend.sendNEC(0xDF2040BF, 32); delay(100);
+  irsend.sendNEC(0xDF2040BF, 32); delay(100);
+}
+
+void sendLloyd() {
+  irsend.sendNEC(0x08F740BF, 32); delay(100);
+  irsend.sendNEC(0x08F740BF, 32); delay(100);
+}
+
+void sendIntex() {
+  irsend.sendNEC(0x19E640BF, 32); delay(100);
+  irsend.sendNEC(0x19E640BF, 32); delay(100);
+}
+
+void sendVu() {
+  irsend.sendNEC(0x8E7140BF, 32); delay(100);
+  irsend.sendNEC(0x8E7140BF, 32); delay(100);
+}
+
+void sendSansui() {
+  irsend.sendNEC(0x57E340BF, 32); delay(100);
+  irsend.sendNEC(0x57E340BF, 32); delay(100);
+}
+
 
 
 #include "utils.h"
@@ -252,6 +327,21 @@ const TvBrandTarget TvBrands[] = {
     REGISTER_TARGET(sendMedion),
     REGISTER_TARGET(sendLoewe),
     REGISTER_TARGET(sendOnida),
+    REGISTER_TARGET(sendZenith),
+    REGISTER_TARGET(sendElement),
+    REGISTER_TARGET(sendSeiki),
+    REGISTER_TARGET(sendWestinghouse),
+    REGISTER_TARGET(sendSylvania),
+    REGISTER_TARGET(sendPioneer),
+    REGISTER_TARGET(sendRCA),
+    REGISTER_TARGET(sendOrion),
+    REGISTER_TARGET(sendBPL),
+    REGISTER_TARGET(sendVideocon),
+    REGISTER_TARGET(sendMicromax),
+    REGISTER_TARGET(sendLloyd),
+    REGISTER_TARGET(sendIntex),
+    REGISTER_TARGET(sendVu),
+    REGISTER_TARGET(sendSansui),
 };
 
 const int numTvBrands = sizeof(TvBrands) / sizeof(TvBrands[0]);

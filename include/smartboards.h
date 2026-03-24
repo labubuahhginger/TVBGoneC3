@@ -113,6 +113,31 @@ void sendItatouch() {
   irsend.sendNEC(0x7C83C03F, 32); delay(100);
 }
 
+void sendPlanar() {
+  irsend.sendNEC(0x1F6040BF, 32); delay(100);
+  irsend.sendNEC(0x1F6040BF, 32); delay(100);
+}
+
+void sendLeyard() {
+  irsend.sendNEC(0x4CB340BF, 32); delay(100);
+  irsend.sendNEC(0x4CB340BF, 32); delay(100);
+}
+
+void sendAbsen() {
+  irsend.sendNEC(0x08F740BF, 32); delay(100);
+  irsend.sendNEC(0x08F740BF, 32); delay(100);
+}
+
+void sendOptomaBoard() {
+  irsend.sendNEC(0xBC43CE31, 32); delay(100);
+  irsend.sendNEC(0xBC43CE31, 32); delay(100);
+}
+
+void sendELO() {
+  irsend.sendNEC(0x04FB40BF, 32); delay(100);
+  irsend.sendNEC(0x04FB40BF, 32); delay(100);
+}
+
 
 
 
@@ -145,6 +170,11 @@ const SmartBoardBrandTarget SmartBoardBrands[] = {
     REGISTER_TARGET(sendDahua),
     REGISTER_TARGET(sendDTEN),
     REGISTER_TARGET(sendItatouch),
+    REGISTER_TARGET(sendPlanar),
+    REGISTER_TARGET(sendLeyard),
+    REGISTER_TARGET(sendAbsen),
+    REGISTER_TARGET(sendOptomaBoard),
+    REGISTER_TARGET(sendELO),
 };
 
 const int numSmartBoardBrands = sizeof(SmartBoardBrands) / sizeof(SmartBoardBrands[0]);

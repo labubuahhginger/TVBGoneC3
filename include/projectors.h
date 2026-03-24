@@ -165,6 +165,56 @@ void sendDangbei() {
   irsend.sendNEC(0xF50AC03F, 32); delay(100);
 }
 
+void sendRunco() {
+  irsend.sendNEC(0x00FF40BF, 32); delay(100);
+  irsend.sendNEC(0x00FF40BF, 32); delay(100);
+}
+
+void sendEiki() {
+  irsend.sendNEC(0x38C740BF, 32); delay(100);
+  irsend.sendNEC(0x38C740BF, 32); delay(100);
+}
+
+void sendJVCProjector() {
+  irsend.sendJVC(0xC5E8, 16, false); delay(50);
+  irsend.sendJVC(0xC5E8, 16, true);  delay(50);
+}
+
+void sendDigitalProjection() {
+  irsend.sendNEC(0x807F40BF, 32); delay(100);
+  irsend.sendNEC(0x807F40BF, 32); delay(100);
+}
+
+void sendProxima() {
+  irsend.sendNEC(0x4CB340BF, 32); delay(100);
+  irsend.sendNEC(0x4CB340BF, 32); delay(100);
+}
+
+void sendBoxlight() {
+  irsend.sendNEC(0x19E640BF, 32); delay(100);
+  irsend.sendNEC(0x19E640BF, 32); delay(100);
+}
+
+void sendDukane() {
+  irsend.sendNEC(0x1CE340BF, 32); delay(100);
+  irsend.sendNEC(0x1CE340BF, 32); delay(100);
+}
+
+void sendBOE() {
+  irsend.sendNEC(0x08F740BF, 32); delay(100);
+  irsend.sendNEC(0x08F740BF, 32); delay(100);
+}
+
+void sendBarcoProjector() {
+  irsend.sendNEC(0x8F70C03F, 32); delay(100);
+  irsend.sendNEC(0x8F70C03F, 32); delay(100);
+}
+
+void sendChristieProjector() {
+  irsend.sendNEC(0xC73840BF, 32); delay(100);
+  irsend.sendNEC(0xC73840BF, 32); delay(100);
+}
+
 
 
 
@@ -205,6 +255,16 @@ const ProjectorBrandTarget ProjectorBrands[] = {
     REGISTER_TARGET(sendKodak),
     REGISTER_TARGET(sendFormovie),
     REGISTER_TARGET(sendDangbei),
+    REGISTER_TARGET(sendRunco),
+    REGISTER_TARGET(sendEiki),
+    REGISTER_TARGET(sendJVCProjector),
+    REGISTER_TARGET(sendDigitalProjection),
+    REGISTER_TARGET(sendProxima),
+    REGISTER_TARGET(sendBoxlight),
+    REGISTER_TARGET(sendDukane),
+    REGISTER_TARGET(sendBOE),
+    REGISTER_TARGET(sendBarcoProjector),
+    REGISTER_TARGET(sendChristieProjector),
 };
 
 const int numProjectorBrands = sizeof(ProjectorBrands) / sizeof(ProjectorBrands[0]);
