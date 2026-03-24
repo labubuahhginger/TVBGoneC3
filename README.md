@@ -23,7 +23,7 @@
 ![Platform](https://img.shields.io/badge/platform-ESP32--C3-red?logo=espressif)
 ![Framework](https://img.shields.io/badge/framework-Arduino-teal?logo=arduino)
 ![License](https://img.shields.io/badge/license-MIT-green)
-![Devices](https://img.shields.io/badge/devices-56%2B-blueviolet)
+![Devices](https://img.shields.io/badge/devices-74%2B-blueviolet)
 
 ---
 
@@ -43,13 +43,13 @@ Skiddy is the official mascot of SkidBGone. He doesn't know what mercy is.
 
 ## ⚡ What it does
 
-One button press. Skiddy sends IR power-off codes to **56+ devices** — TVs, projectors, and smart boards — one by one, until the room goes dark.
+One button press. Skiddy sends IR power-off codes to **74+ devices** — TVs, projectors, and smart boards — one by one, until the room goes dark.
 
 | Category | Count |
 |---|---|
-| 📺 TVs | 24 brands |
-| 📽️ Projectors | 20 brands |
-| 🖥️ Smart Boards & Pro Displays | 12 brands |
+| 📺 TVs | 32 brands |
+| 📽️ Projectors | 25 brands |
+| 🖥️ Smart Boards & Pro Displays | 17 brands |
 
 > *"Skiddy done it's job."*
 
@@ -85,23 +85,23 @@ DAT             →  GPIO3
 ## 📺 Supported Devices
 
 <details>
-<summary><b>TVs (24 brands)</b></summary>
+<summary><b>TVs (32 brands)</b></summary>
 
-Samsung · LG · Sony · Philips · Panasonic · Sharp · Toshiba · Hitachi · Hisense · TCL · Vizio · JVC · Mitsubishi · Vestel/Beko · Haier · Insignia · Sanyo · Funai · Magnavox · Emerson · Grundig · Xiaomi · Skyworth · AOC
-
-</details>
-
-<details>
-<summary><b>Projectors (20 brands)</b></summary>
-
-BenQ · Epson · Optoma · ViewSonic · Acer · Infocus · NEC · Panasonic · Sony VPL · Casio · Sanyo · Mitsubishi · Hitachi · Dell · Ricoh · Vivitek · LG Minibeam · XGIMI · JmGo · Anker Nebula
+Samsung · LG · Sony · Philips · Panasonic · Sharp · Toshiba · Hitachi · Hisense · TCL · Vizio · JVC · Mitsubishi · Vestel/Beko · Haier · Insignia · Sanyo · Funai · Magnavox · Emerson · Grundig · Xiaomi · Skyworth · AOC · Coocaa · Realme · Sceptre · Polaroid · Changhong · Medion · Loewe · Onida
 
 </details>
 
 <details>
-<summary><b>Smart Boards & Pro Displays (12 brands)</b></summary>
+<summary><b>Projectors (25 brands)</b></summary>
 
-Barco · Christie · Canon · SMART Board · Promethean · NexTouch · Newline · ViewSonic IFP · BenQ Board · Clevertouch · Maxhub · Hikvision
+BenQ · Epson · Optoma · ViewSonic · Acer · Infocus · NEC · Panasonic · Sony VPL · Casio · Sanyo · Mitsubishi · Hitachi · Dell · Ricoh · Vivitek · LG Minibeam · XGIMI · JmGo · Anker Nebula · Asus · Sharp PJ · Kodak · Formovie · Dangbei
+
+</details>
+
+<details>
+<summary><b>Smart Boards & Pro Displays (17 brands)</b></summary>
+
+Barco · Christie · Canon · SMART Board · Promethean · NexTouch · Newline · ViewSonic IFP · BenQ Board · Clevertouch · Maxhub · Hikvision · Legamaster · IQTouch · Dahua · DTEN · Itatouch
 
 </details>
 
