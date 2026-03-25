@@ -280,19 +280,6 @@ void sendSansui() {
   irsend.sendNEC(0x57E340BF, 32); delay(100);
 }
 
-
-
-#include "utils.h"
-
-#ifndef REGISTER_TARGET
-#define REGISTER_TARGET(func) { #func, func }
-#endif
-
-struct TvBrandTarget {
-    const char* funcName;
-    void (*sendFunc)();
-};
-
 void sendAkai() {
   irsend.sendNEC(0x00FF00FF, 32); delay(100);
   irsend.sendNEC(0x00FF00FF, 32); delay(100);
@@ -423,7 +410,6 @@ void sendJTC() {
   irsend.sendNEC(0x00FFB847, 32); delay(100);
   irsend.sendNEC(0x00FF47B8, 32); delay(100);
 }
-
 void sendOnePlus() {
   irsend.sendNEC(0x00FF00FF, 32); delay(100);
   irsend.sendNEC(0x00FF00FF, 32); delay(100);
@@ -524,6 +510,18 @@ void sendHannspree() {
   irsend.sendNEC(0x00FFE817, 32); delay(100);
   irsend.sendNEC(0x00FF17E8, 32); delay(100);
 }
+
+
+#include "utils.h"
+
+#ifndef REGISTER_TARGET
+#define REGISTER_TARGET(func) { #func, func }
+#endif
+
+struct TvBrandTarget {
+    const char* funcName;
+    void (*sendFunc)();
+};
 
 const TvBrandTarget TvBrands[] = {
     REGISTER_TARGET(sendSamsung),
