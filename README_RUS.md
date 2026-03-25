@@ -23,7 +23,7 @@
 ![Platform](https://img.shields.io/badge/platform-ESP32--C3-red?logo=espressif)
 ![Framework](https://img.shields.io/badge/framework-Arduino-teal?logo=arduino)
 ![License](https://img.shields.io/badge/license-MIT-green)
-![Devices](https://img.shields.io/badge/devices-104%2B-blueviolet)
+![Devices](https://img.shields.io/badge/devices-200%2B-blueviolet)
 
 ---
 
@@ -43,13 +43,13 @@
 
 ## ⚡ Что это делает
 
-Одно нажатие. Скидди посылает IR-коды выключения на **104+ устройств** — телевизоры, проекторы и интерактивные доски — одно за другим, пока комната не погрузится в темноту.
+Одно нажатие. Скидди посылает IR-коды выключения на **200+ устройств** — телевизоры, проекторы и интерактивные доски — одно за другим, пока комната не погрузится в темноту.
 
 | Категория | Количество |
 |---|---|
-| 📺 Телевизоры | 47 бренда |
-| 📽️ Проекторы | 35 брендов |
-| 🖥️ Интерактивные доски | 22 брендов |
+| 📺 Телевизоры | 93 бренда |
+| 📽️ Проекторы | 70 брендов |
+| 🖥️ Интерактивные доски | 37 брендов |
 
 > *«Скидди сделал своё дело.»*
 
@@ -85,23 +85,23 @@ DAT             →  GPIO3
 ## 📺 Поддерживаемые устройства
 
 <details>
-<summary><b>Телевизоры (47 брендов)</b></summary>
+<summary><b>Телевизоры (93 брендов)</b></summary>
 
-Samsung · LG · Sony · Philips · Panasonic · Sharp · Toshiba · Hitachi · Hisense · TCL · Vizio · JVC · Mitsubishi · Vestel/Beko · Haier · Insignia · Sanyo · Funai · Magnavox · Emerson · Grundig · Xiaomi · Skyworth · AOC · Coocaa · Realme · Sceptre · Polaroid · Changhong · Medion · Loewe · Onida · Zenith · Element · Seiki · Westinghouse · Sylvania · Pioneer · RCA · Orion · BPL · Videocon · Micromax · Lloyd · Intex · Vu · Sansui
-
-</details>
-
-<details>
-<summary><b>Проекторы (35 брендов)</b></summary>
-
-BenQ · Epson · Optoma · ViewSonic · Acer · Infocus · NEC · Panasonic · Sony VPL · Casio · Sanyo · Mitsubishi · Hitachi · Dell · Ricoh · Vivitek · LG Minibeam · XGIMI · JmGo · Anker Nebula · Asus · Sharp PJ · Kodak · Formovie · Dangbei · Runco · Eiki · JVC Projector · Digital Projection · Proxima · Boxlight · Dukane · BOE · Barco Projector · Christie Projector
+Samsung · LG · Sony · Philips · Panasonic · Sharp · Toshiba · Hitachi · Hisense · TCL · Vizio · JVC · Mitsubishi · Vestel/Beko · Haier · Insignia · Sanyo · Funai · Magnavox · Emerson · Grundig · Xiaomi · Skyworth · AOC · Coocaa · Realme · Sceptre · Polaroid · Changhong · Medion · Loewe · Onida · Zenith · Element · Seiki · Westinghouse · Sylvania · Pioneer · RCA · Orion · BPL · Videocon · Micromax · Lloyd · Intex · Vu · Sansui · Akai · Alba · Bush · Celcus · Cello · Crown · Digihome · Finlux · JMB · Linsar · Luxor · Polaroid TV · Techwood · Telefunken · Walker · Blaupunkt · Dyon · HKC · Kendo · Metz · OK · Peaq · Salora · Swisstec · UMC · JTC · OnePlus · Motorola TV · Nokia TV · Thomson · JVC Kenwood · Silo Digital · Supersonic · Craig · Curtis · Proscan · Naxa · Viore · Olevia · Dynex · Auria · Avera · Contex · EKT · GFM · Hannspree
 
 </details>
 
 <details>
-<summary><b>Интерактивные доски (22 бренда)</b></summary>
+<summary><b>Проекторы (70 брендов)</b></summary>
 
-Barco · Christie · Canon · SMART Board · Promethean · NexTouch · Newline · ViewSonic IFP · BenQ Board · Clevertouch · Maxhub · Hikvision · Legamaster · IQTouch · Dahua · DTEN · Itatouch · Planar · Leyard · Absen · Optoma Board · ELO
+BenQ · Epson · Optoma · ViewSonic · Acer · Infocus · NEC · Panasonic · Sony VPL · Casio · Sanyo · Mitsubishi · Hitachi · Dell · Ricoh · Vivitek · LG Minibeam · XGIMI · JmGo · Anker Nebula · Asus · Sharp PJ · Kodak · Formovie · Dangbei · Runco · Eiki · JVC Projector · Digital Projection · Proxima · Boxlight · Dukane · BOE · Barco Projector · Christie Projector · Yaber · Vankyo · AuKing · GooDee · PVO · FANGOR · Gzunelic · DBPOWER · ELEPHAS · VIZONO · TOPTRO · WiMiUS · Artlii · BIGASUO · HOWWOO · VAVA · AWOL · Hisense Projector · Wemax · Xiaomi Projector · Samsung Projector · AAXA · Miroir · QKK · Jinhoo · APEMAN · Crosstour · HOMPOW · DRJ · Vamvo · TOPVISION · CiBest · Meer · Xinteza · Cinemango
+
+</details>
+
+<details>
+<summary><b>Интерактивные доски (37 брендов)</b></summary>
+
+Barco · Christie · Canon · SMART Board · Promethean · NexTouch · Newline · ViewSonic IFP · BenQ Board · Clevertouch · Maxhub · Hikvision · Legamaster · IQTouch · Dahua · DTEN · Itatouch · Planar · Leyard · Absen · Optoma Board · ELO · SmartDeck · TouchIT · Genee · Hitachi Board · Panasonic Board · Recordex · Qomo · Triumph Board · InFocus Board · HoverCam · Ipevo · OneScreen · Avocor · StarBoard · VibeBoard
 
 </details>
 

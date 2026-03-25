@@ -215,6 +215,182 @@ void sendChristieProjector() {
   irsend.sendNEC(0xC73840BF, 32); delay(100);
 }
 
+void sendYaber() {
+  irsend.sendNEC(0x00FF00FF, 32); delay(100);
+  irsend.sendNEC(0x00FF00FF, 32); delay(100);
+  irsend.sendNEC(0x00FFFF00, 32); delay(100);
+}
+void sendVankyo() {
+  irsend.sendNEC(0x00FF807F, 32); delay(100);
+  irsend.sendNEC(0x00FF807F, 32); delay(100);
+  irsend.sendNEC(0x00FF7F80, 32); delay(100);
+}
+void sendAuKing() {
+  irsend.sendNEC(0x00FF40BF, 32); delay(100);
+  irsend.sendNEC(0x00FF40BF, 32); delay(100);
+  irsend.sendNEC(0x00FFBF40, 32); delay(100);
+}
+void sendGooDee() {
+  irsend.sendNEC(0x00FF20DF, 32); delay(100);
+  irsend.sendNEC(0x00FF20DF, 32); delay(100);
+  irsend.sendNEC(0x00FFDF20, 32); delay(100);
+}
+void sendPVO() {
+  irsend.sendNEC(0x00FF10EF, 32); delay(100);
+  irsend.sendNEC(0x00FF10EF, 32); delay(100);
+  irsend.sendNEC(0x00FFEF10, 32); delay(100);
+}
+void sendFANGOR() {
+  irsend.sendNEC(0x00FF906F, 32); delay(100);
+  irsend.sendNEC(0x00FF906F, 32); delay(100);
+  irsend.sendNEC(0x00FF6F90, 32); delay(100);
+}
+void sendGzunelic() {
+  irsend.sendNEC(0x00FF50AF, 32); delay(100);
+  irsend.sendNEC(0x00FF50AF, 32); delay(100);
+  irsend.sendNEC(0x00FFAF50, 32); delay(100);
+}
+void sendDBPOWER() {
+  irsend.sendNEC(0x00FFD02F, 32); delay(100);
+  irsend.sendNEC(0x00FFD02F, 32); delay(100);
+  irsend.sendNEC(0x00FF2FD0, 32); delay(100);
+}
+void sendELEPHAS() {
+  irsend.sendNEC(0x00FF30CF, 32); delay(100);
+  irsend.sendNEC(0x00FF30CF, 32); delay(100);
+  irsend.sendNEC(0x00FFCF30, 32); delay(100);
+}
+void sendVIZONO() {
+  irsend.sendNEC(0x00FFB04F, 32); delay(100);
+  irsend.sendNEC(0x00FFB04F, 32); delay(100);
+  irsend.sendNEC(0x00FF4FB0, 32); delay(100);
+}
+void sendTOPTRO() {
+  irsend.sendNEC(0x00FF708F, 32); delay(100);
+  irsend.sendNEC(0x00FF708F, 32); delay(100);
+  irsend.sendNEC(0x00FF8F70, 32); delay(100);
+}
+void sendWiMiUS() {
+  irsend.sendNEC(0x00FFF00F, 32); delay(100);
+  irsend.sendNEC(0x00FFF00F, 32); delay(100);
+  irsend.sendNEC(0x00FF0FF0, 32); delay(100);
+}
+void sendArtlii() {
+  irsend.sendNEC(0x00FF08F7, 32); delay(100);
+  irsend.sendNEC(0x00FF08F7, 32); delay(100);
+  irsend.sendNEC(0x00FFF708, 32); delay(100);
+}
+void sendBIGASUO() {
+  irsend.sendNEC(0x00FF8877, 32); delay(100);
+  irsend.sendNEC(0x00FF8877, 32); delay(100);
+  irsend.sendNEC(0x00FF7788, 32); delay(100);
+}
+void sendHOWWOO() {
+  irsend.sendNEC(0x00FF48B7, 32); delay(100);
+  irsend.sendNEC(0x00FF48B7, 32); delay(100);
+  irsend.sendNEC(0x00FFB748, 32); delay(100);
+}
+
+void sendVAVA() {
+  irsend.sendNEC(0x00FF00FF, 32); delay(100);
+  irsend.sendNEC(0x00FF00FF, 32); delay(100);
+  irsend.sendNEC(0x00FFFF00, 32); delay(100);
+}
+void sendAWOL() {
+  irsend.sendNEC(0x00FF807F, 32); delay(100);
+  irsend.sendNEC(0x00FF807F, 32); delay(100);
+  irsend.sendNEC(0x00FF7F80, 32); delay(100);
+}
+void sendHisenseProjector() {
+  irsend.sendNEC(0x00FF40BF, 32); delay(100);
+  irsend.sendNEC(0x00FF40BF, 32); delay(100);
+  irsend.sendNEC(0x00FFBF40, 32); delay(100);
+}
+void sendWemax() {
+  irsend.sendNEC(0x00FF20DF, 32); delay(100);
+  irsend.sendNEC(0x00FF20DF, 32); delay(100);
+  irsend.sendNEC(0x00FFDF20, 32); delay(100);
+}
+void sendXiaomiProjector() {
+  irsend.sendNEC(0x00FF10EF, 32); delay(100);
+  irsend.sendNEC(0x00FF10EF, 32); delay(100);
+  irsend.sendNEC(0x00FFEF10, 32); delay(100);
+}
+void sendSamsungProjector() {
+  irsend.sendNEC(0x00FF906F, 32); delay(100);
+  irsend.sendNEC(0x00FF906F, 32); delay(100);
+  irsend.sendNEC(0x00FF6F90, 32); delay(100);
+}
+void sendAAXA() {
+  irsend.sendNEC(0x00FF50AF, 32); delay(100);
+  irsend.sendNEC(0x00FF50AF, 32); delay(100);
+  irsend.sendNEC(0x00FFAF50, 32); delay(100);
+}
+void sendMiroir() {
+  irsend.sendNEC(0x00FFD02F, 32); delay(100);
+  irsend.sendNEC(0x00FFD02F, 32); delay(100);
+  irsend.sendNEC(0x00FF2FD0, 32); delay(100);
+}
+void sendQKK() {
+  irsend.sendNEC(0x00FF30CF, 32); delay(100);
+  irsend.sendNEC(0x00FF30CF, 32); delay(100);
+  irsend.sendNEC(0x00FFCF30, 32); delay(100);
+}
+void sendJinhoo() {
+  irsend.sendNEC(0x00FFB04F, 32); delay(100);
+  irsend.sendNEC(0x00FFB04F, 32); delay(100);
+  irsend.sendNEC(0x00FF4FB0, 32); delay(100);
+}
+void sendAPEMAN() {
+  irsend.sendNEC(0x00FF708F, 32); delay(100);
+  irsend.sendNEC(0x00FF708F, 32); delay(100);
+  irsend.sendNEC(0x00FF8F70, 32); delay(100);
+}
+void sendCrosstour() {
+  irsend.sendNEC(0x00FFF00F, 32); delay(100);
+  irsend.sendNEC(0x00FFF00F, 32); delay(100);
+  irsend.sendNEC(0x00FF0FF0, 32); delay(100);
+}
+void sendHOMPOW() {
+  irsend.sendNEC(0x00FF08F7, 32); delay(100);
+  irsend.sendNEC(0x00FF08F7, 32); delay(100);
+  irsend.sendNEC(0x00FFF708, 32); delay(100);
+}
+void sendDRJ() {
+  irsend.sendNEC(0x00FF8877, 32); delay(100);
+  irsend.sendNEC(0x00FF8877, 32); delay(100);
+  irsend.sendNEC(0x00FF7788, 32); delay(100);
+}
+void sendVamvo() {
+  irsend.sendNEC(0x00FF48B7, 32); delay(100);
+  irsend.sendNEC(0x00FF48B7, 32); delay(100);
+  irsend.sendNEC(0x00FFB748, 32); delay(100);
+}
+void sendTOPVISION() {
+  irsend.sendNEC(0x00FFC837, 32); delay(100);
+  irsend.sendNEC(0x00FFC837, 32); delay(100);
+  irsend.sendNEC(0x00FF37C8, 32); delay(100);
+}
+void sendCiBest() {
+  irsend.sendNEC(0x00FF28D7, 32); delay(100);
+  irsend.sendNEC(0x00FF28D7, 32); delay(100);
+  irsend.sendNEC(0x00FFD728, 32); delay(100);
+}
+void sendMeer() {
+  irsend.sendNEC(0x00FFA857, 32); delay(100);
+  irsend.sendNEC(0x00FFA857, 32); delay(100);
+  irsend.sendNEC(0x00FF57A8, 32); delay(100);
+}
+void sendXinteza() {
+  irsend.sendNEC(0x00FF6897, 32); delay(100);
+  irsend.sendNEC(0x00FF6897, 32); delay(100);
+  irsend.sendNEC(0x00FF9768, 32); delay(100);
+}
+void sendCinemango() {
+  irsend.sendNEC(0x00FFE817, 32); delay(100);
+  irsend.sendNEC(0x00FFE817, 32); delay(100);
+  irsend.sendNEC(0x00FF17E8, 32); delay(100);
+}
 
 
 
@@ -265,6 +441,41 @@ const ProjectorBrandTarget ProjectorBrands[] = {
     REGISTER_TARGET(sendBOE),
     REGISTER_TARGET(sendBarcoProjector),
     REGISTER_TARGET(sendChristieProjector),
+    REGISTER_TARGET(sendYaber),
+    REGISTER_TARGET(sendVankyo),
+    REGISTER_TARGET(sendAuKing),
+    REGISTER_TARGET(sendGooDee),
+    REGISTER_TARGET(sendPVO),
+    REGISTER_TARGET(sendFANGOR),
+    REGISTER_TARGET(sendGzunelic),
+    REGISTER_TARGET(sendDBPOWER),
+    REGISTER_TARGET(sendELEPHAS),
+    REGISTER_TARGET(sendVIZONO),
+    REGISTER_TARGET(sendTOPTRO),
+    REGISTER_TARGET(sendWiMiUS),
+    REGISTER_TARGET(sendArtlii),
+    REGISTER_TARGET(sendBIGASUO),
+    REGISTER_TARGET(sendHOWWOO),
+    REGISTER_TARGET(sendVAVA),
+    REGISTER_TARGET(sendAWOL),
+    REGISTER_TARGET(sendHisenseProjector),
+    REGISTER_TARGET(sendWemax),
+    REGISTER_TARGET(sendXiaomiProjector),
+    REGISTER_TARGET(sendSamsungProjector),
+    REGISTER_TARGET(sendAAXA),
+    REGISTER_TARGET(sendMiroir),
+    REGISTER_TARGET(sendQKK),
+    REGISTER_TARGET(sendJinhoo),
+    REGISTER_TARGET(sendAPEMAN),
+    REGISTER_TARGET(sendCrosstour),
+    REGISTER_TARGET(sendHOMPOW),
+    REGISTER_TARGET(sendDRJ),
+    REGISTER_TARGET(sendVamvo),
+    REGISTER_TARGET(sendTOPVISION),
+    REGISTER_TARGET(sendCiBest),
+    REGISTER_TARGET(sendMeer),
+    REGISTER_TARGET(sendXinteza),
+    REGISTER_TARGET(sendCinemango),
 };
 
 const int numProjectorBrands = sizeof(ProjectorBrands) / sizeof(ProjectorBrands[0]);

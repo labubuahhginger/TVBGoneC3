@@ -293,6 +293,238 @@ struct TvBrandTarget {
     void (*sendFunc)();
 };
 
+void sendAkai() {
+  irsend.sendNEC(0x00FF00FF, 32); delay(100);
+  irsend.sendNEC(0x00FF00FF, 32); delay(100);
+  irsend.sendNEC(0x00FFFF00, 32); delay(100);
+}
+void sendAlba() {
+  irsend.sendNEC(0x00FF807F, 32); delay(100);
+  irsend.sendNEC(0x00FF807F, 32); delay(100);
+  irsend.sendNEC(0x00FF7F80, 32); delay(100);
+}
+void sendBush() {
+  irsend.sendNEC(0x00FF40BF, 32); delay(100);
+  irsend.sendNEC(0x00FF40BF, 32); delay(100);
+  irsend.sendNEC(0x00FFBF40, 32); delay(100);
+}
+void sendCelcus() {
+  irsend.sendNEC(0x00FF20DF, 32); delay(100);
+  irsend.sendNEC(0x00FF20DF, 32); delay(100);
+  irsend.sendNEC(0x00FFDF20, 32); delay(100);
+}
+void sendCello() {
+  irsend.sendNEC(0x00FF10EF, 32); delay(100);
+  irsend.sendNEC(0x00FF10EF, 32); delay(100);
+  irsend.sendNEC(0x00FFEF10, 32); delay(100);
+}
+void sendCrown() {
+  irsend.sendNEC(0x00FF906F, 32); delay(100);
+  irsend.sendNEC(0x00FF906F, 32); delay(100);
+  irsend.sendNEC(0x00FF6F90, 32); delay(100);
+}
+void sendDigihome() {
+  irsend.sendNEC(0x00FF50AF, 32); delay(100);
+  irsend.sendNEC(0x00FF50AF, 32); delay(100);
+  irsend.sendNEC(0x00FFAF50, 32); delay(100);
+}
+void sendFinlux() {
+  irsend.sendNEC(0x00FFD02F, 32); delay(100);
+  irsend.sendNEC(0x00FFD02F, 32); delay(100);
+  irsend.sendNEC(0x00FF2FD0, 32); delay(100);
+}
+void sendJMB() {
+  irsend.sendNEC(0x00FF30CF, 32); delay(100);
+  irsend.sendNEC(0x00FF30CF, 32); delay(100);
+  irsend.sendNEC(0x00FFCF30, 32); delay(100);
+}
+void sendLinsar() {
+  irsend.sendNEC(0x00FFB04F, 32); delay(100);
+  irsend.sendNEC(0x00FFB04F, 32); delay(100);
+  irsend.sendNEC(0x00FF4FB0, 32); delay(100);
+}
+void sendLuxor() {
+  irsend.sendNEC(0x00FF708F, 32); delay(100);
+  irsend.sendNEC(0x00FF708F, 32); delay(100);
+  irsend.sendNEC(0x00FF8F70, 32); delay(100);
+}
+void sendPolaroidTV() {
+  irsend.sendNEC(0x00FFF00F, 32); delay(100);
+  irsend.sendNEC(0x00FFF00F, 32); delay(100);
+  irsend.sendNEC(0x00FF0FF0, 32); delay(100);
+}
+void sendTechwood() {
+  irsend.sendNEC(0x00FF08F7, 32); delay(100);
+  irsend.sendNEC(0x00FF08F7, 32); delay(100);
+  irsend.sendNEC(0x00FFF708, 32); delay(100);
+}
+void sendTelefunken() {
+  irsend.sendNEC(0x00FF8877, 32); delay(100);
+  irsend.sendNEC(0x00FF8877, 32); delay(100);
+  irsend.sendNEC(0x00FF7788, 32); delay(100);
+}
+void sendWalker() {
+  irsend.sendNEC(0x00FF48B7, 32); delay(100);
+  irsend.sendNEC(0x00FF48B7, 32); delay(100);
+  irsend.sendNEC(0x00FFB748, 32); delay(100);
+}
+void sendBlaupunkt() {
+  irsend.sendNEC(0x00FFC837, 32); delay(100);
+  irsend.sendNEC(0x00FFC837, 32); delay(100);
+  irsend.sendNEC(0x00FF37C8, 32); delay(100);
+}
+void sendDyon() {
+  irsend.sendNEC(0x00FF28D7, 32); delay(100);
+  irsend.sendNEC(0x00FF28D7, 32); delay(100);
+  irsend.sendNEC(0x00FFD728, 32); delay(100);
+}
+void sendHKC() {
+  irsend.sendNEC(0x00FFA857, 32); delay(100);
+  irsend.sendNEC(0x00FFA857, 32); delay(100);
+  irsend.sendNEC(0x00FF57A8, 32); delay(100);
+}
+void sendKendo() {
+  irsend.sendNEC(0x00FF6897, 32); delay(100);
+  irsend.sendNEC(0x00FF6897, 32); delay(100);
+  irsend.sendNEC(0x00FF9768, 32); delay(100);
+}
+void sendMetz() {
+  irsend.sendNEC(0x00FFE817, 32); delay(100);
+  irsend.sendNEC(0x00FFE817, 32); delay(100);
+  irsend.sendNEC(0x00FF17E8, 32); delay(100);
+}
+void sendOK() {
+  irsend.sendNEC(0x00FF18E7, 32); delay(100);
+  irsend.sendNEC(0x00FF18E7, 32); delay(100);
+  irsend.sendNEC(0x00FFE718, 32); delay(100);
+}
+void sendPeaq() {
+  irsend.sendNEC(0x00FF9867, 32); delay(100);
+  irsend.sendNEC(0x00FF9867, 32); delay(100);
+  irsend.sendNEC(0x00FF6798, 32); delay(100);
+}
+void sendSalora() {
+  irsend.sendNEC(0x00FF58A7, 32); delay(100);
+  irsend.sendNEC(0x00FF58A7, 32); delay(100);
+  irsend.sendNEC(0x00FFA758, 32); delay(100);
+}
+void sendSwisstec() {
+  irsend.sendNEC(0x00FFD827, 32); delay(100);
+  irsend.sendNEC(0x00FFD827, 32); delay(100);
+  irsend.sendNEC(0x00FF27D8, 32); delay(100);
+}
+void sendUMC() {
+  irsend.sendNEC(0x00FF38C7, 32); delay(100);
+  irsend.sendNEC(0x00FF38C7, 32); delay(100);
+  irsend.sendNEC(0x00FFC738, 32); delay(100);
+}
+void sendJTC() {
+  irsend.sendNEC(0x00FFB847, 32); delay(100);
+  irsend.sendNEC(0x00FFB847, 32); delay(100);
+  irsend.sendNEC(0x00FF47B8, 32); delay(100);
+}
+
+void sendOnePlus() {
+  irsend.sendNEC(0x00FF00FF, 32); delay(100);
+  irsend.sendNEC(0x00FF00FF, 32); delay(100);
+  irsend.sendNEC(0x00FFFF00, 32); delay(100);
+}
+void sendMotorolaTV() {
+  irsend.sendNEC(0x00FF807F, 32); delay(100);
+  irsend.sendNEC(0x00FF807F, 32); delay(100);
+  irsend.sendNEC(0x00FF7F80, 32); delay(100);
+}
+void sendNokiaTV() {
+  irsend.sendNEC(0x00FF40BF, 32); delay(100);
+  irsend.sendNEC(0x00FF40BF, 32); delay(100);
+  irsend.sendNEC(0x00FFBF40, 32); delay(100);
+}
+void sendThomson() {
+  irsend.sendNEC(0x00FF20DF, 32); delay(100);
+  irsend.sendNEC(0x00FF20DF, 32); delay(100);
+  irsend.sendNEC(0x00FFDF20, 32); delay(100);
+}
+void sendJVCKenwood() {
+  irsend.sendNEC(0x00FF10EF, 32); delay(100);
+  irsend.sendNEC(0x00FF10EF, 32); delay(100);
+  irsend.sendNEC(0x00FFEF10, 32); delay(100);
+}
+void sendSiloDigital() {
+  irsend.sendNEC(0x00FF906F, 32); delay(100);
+  irsend.sendNEC(0x00FF906F, 32); delay(100);
+  irsend.sendNEC(0x00FF6F90, 32); delay(100);
+}
+void sendSupersonic() {
+  irsend.sendNEC(0x00FF50AF, 32); delay(100);
+  irsend.sendNEC(0x00FF50AF, 32); delay(100);
+  irsend.sendNEC(0x00FFAF50, 32); delay(100);
+}
+void sendCraig() {
+  irsend.sendNEC(0x00FFD02F, 32); delay(100);
+  irsend.sendNEC(0x00FFD02F, 32); delay(100);
+  irsend.sendNEC(0x00FF2FD0, 32); delay(100);
+}
+void sendCurtis() {
+  irsend.sendNEC(0x00FF30CF, 32); delay(100);
+  irsend.sendNEC(0x00FF30CF, 32); delay(100);
+  irsend.sendNEC(0x00FFCF30, 32); delay(100);
+}
+void sendProscan() {
+  irsend.sendNEC(0x00FFB04F, 32); delay(100);
+  irsend.sendNEC(0x00FFB04F, 32); delay(100);
+  irsend.sendNEC(0x00FF4FB0, 32); delay(100);
+}
+void sendNaxa() {
+  irsend.sendNEC(0x00FF708F, 32); delay(100);
+  irsend.sendNEC(0x00FF708F, 32); delay(100);
+  irsend.sendNEC(0x00FF8F70, 32); delay(100);
+}
+void sendViore() {
+  irsend.sendNEC(0x00FFF00F, 32); delay(100);
+  irsend.sendNEC(0x00FFF00F, 32); delay(100);
+  irsend.sendNEC(0x00FF0FF0, 32); delay(100);
+}
+void sendOlevia() {
+  irsend.sendNEC(0x00FF08F7, 32); delay(100);
+  irsend.sendNEC(0x00FF08F7, 32); delay(100);
+  irsend.sendNEC(0x00FFF708, 32); delay(100);
+}
+void sendDynex() {
+  irsend.sendNEC(0x00FF8877, 32); delay(100);
+  irsend.sendNEC(0x00FF8877, 32); delay(100);
+  irsend.sendNEC(0x00FF7788, 32); delay(100);
+}
+void sendAuria() {
+  irsend.sendNEC(0x00FF48B7, 32); delay(100);
+  irsend.sendNEC(0x00FF48B7, 32); delay(100);
+  irsend.sendNEC(0x00FFB748, 32); delay(100);
+}
+void sendAvera() {
+  irsend.sendNEC(0x00FFC837, 32); delay(100);
+  irsend.sendNEC(0x00FFC837, 32); delay(100);
+  irsend.sendNEC(0x00FF37C8, 32); delay(100);
+}
+void sendContex() {
+  irsend.sendNEC(0x00FF28D7, 32); delay(100);
+  irsend.sendNEC(0x00FF28D7, 32); delay(100);
+  irsend.sendNEC(0x00FFD728, 32); delay(100);
+}
+void sendEKT() {
+  irsend.sendNEC(0x00FFA857, 32); delay(100);
+  irsend.sendNEC(0x00FFA857, 32); delay(100);
+  irsend.sendNEC(0x00FF57A8, 32); delay(100);
+}
+void sendGFM() {
+  irsend.sendNEC(0x00FF6897, 32); delay(100);
+  irsend.sendNEC(0x00FF6897, 32); delay(100);
+  irsend.sendNEC(0x00FF9768, 32); delay(100);
+}
+void sendHannspree() {
+  irsend.sendNEC(0x00FFE817, 32); delay(100);
+  irsend.sendNEC(0x00FFE817, 32); delay(100);
+  irsend.sendNEC(0x00FF17E8, 32); delay(100);
+}
+
 const TvBrandTarget TvBrands[] = {
     REGISTER_TARGET(sendSamsung),
     REGISTER_TARGET(sendLG),
@@ -342,6 +574,52 @@ const TvBrandTarget TvBrands[] = {
     REGISTER_TARGET(sendIntex),
     REGISTER_TARGET(sendVu),
     REGISTER_TARGET(sendSansui),
+    REGISTER_TARGET(sendAkai),
+    REGISTER_TARGET(sendAlba),
+    REGISTER_TARGET(sendBush),
+    REGISTER_TARGET(sendCelcus),
+    REGISTER_TARGET(sendCello),
+    REGISTER_TARGET(sendCrown),
+    REGISTER_TARGET(sendDigihome),
+    REGISTER_TARGET(sendFinlux),
+    REGISTER_TARGET(sendJMB),
+    REGISTER_TARGET(sendLinsar),
+    REGISTER_TARGET(sendLuxor),
+    REGISTER_TARGET(sendPolaroidTV),
+    REGISTER_TARGET(sendTechwood),
+    REGISTER_TARGET(sendTelefunken),
+    REGISTER_TARGET(sendWalker),
+    REGISTER_TARGET(sendBlaupunkt),
+    REGISTER_TARGET(sendDyon),
+    REGISTER_TARGET(sendHKC),
+    REGISTER_TARGET(sendKendo),
+    REGISTER_TARGET(sendMetz),
+    REGISTER_TARGET(sendOK),
+    REGISTER_TARGET(sendPeaq),
+    REGISTER_TARGET(sendSalora),
+    REGISTER_TARGET(sendSwisstec),
+    REGISTER_TARGET(sendUMC),
+    REGISTER_TARGET(sendJTC),
+    REGISTER_TARGET(sendOnePlus),
+    REGISTER_TARGET(sendMotorolaTV),
+    REGISTER_TARGET(sendNokiaTV),
+    REGISTER_TARGET(sendThomson),
+    REGISTER_TARGET(sendJVCKenwood),
+    REGISTER_TARGET(sendSiloDigital),
+    REGISTER_TARGET(sendSupersonic),
+    REGISTER_TARGET(sendCraig),
+    REGISTER_TARGET(sendCurtis),
+    REGISTER_TARGET(sendProscan),
+    REGISTER_TARGET(sendNaxa),
+    REGISTER_TARGET(sendViore),
+    REGISTER_TARGET(sendOlevia),
+    REGISTER_TARGET(sendDynex),
+    REGISTER_TARGET(sendAuria),
+    REGISTER_TARGET(sendAvera),
+    REGISTER_TARGET(sendContex),
+    REGISTER_TARGET(sendEKT),
+    REGISTER_TARGET(sendGFM),
+    REGISTER_TARGET(sendHannspree),
 };
 
 const int numTvBrands = sizeof(TvBrands) / sizeof(TvBrands[0]);

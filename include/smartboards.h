@@ -138,7 +138,81 @@ void sendELO() {
   irsend.sendNEC(0x04FB40BF, 32); delay(100);
 }
 
-
+void sendSmartDeck() {
+  irsend.sendNEC(0x00FF00FF, 32); delay(100);
+  irsend.sendNEC(0x00FF00FF, 32); delay(100);
+  irsend.sendNEC(0x00FFFF00, 32); delay(100);
+}
+void sendTouchIT() {
+  irsend.sendNEC(0x00FF807F, 32); delay(100);
+  irsend.sendNEC(0x00FF807F, 32); delay(100);
+  irsend.sendNEC(0x00FF7F80, 32); delay(100);
+}
+void sendGenee() {
+  irsend.sendNEC(0x00FF40BF, 32); delay(100);
+  irsend.sendNEC(0x00FF40BF, 32); delay(100);
+  irsend.sendNEC(0x00FFBF40, 32); delay(100);
+}
+void sendHitachiBoard() {
+  irsend.sendNEC(0x00FF20DF, 32); delay(100);
+  irsend.sendNEC(0x00FF20DF, 32); delay(100);
+  irsend.sendNEC(0x00FFDF20, 32); delay(100);
+}
+void sendPanasonicBoard() {
+  irsend.sendNEC(0x00FF10EF, 32); delay(100);
+  irsend.sendNEC(0x00FF10EF, 32); delay(100);
+  irsend.sendNEC(0x00FFEF10, 32); delay(100);
+}
+void sendRecordex() {
+  irsend.sendNEC(0x00FF906F, 32); delay(100);
+  irsend.sendNEC(0x00FF906F, 32); delay(100);
+  irsend.sendNEC(0x00FF6F90, 32); delay(100);
+}
+void sendQomo() {
+  irsend.sendNEC(0x00FF50AF, 32); delay(100);
+  irsend.sendNEC(0x00FF50AF, 32); delay(100);
+  irsend.sendNEC(0x00FFAF50, 32); delay(100);
+}
+void sendTriumphBoard() {
+  irsend.sendNEC(0x00FFD02F, 32); delay(100);
+  irsend.sendNEC(0x00FFD02F, 32); delay(100);
+  irsend.sendNEC(0x00FF2FD0, 32); delay(100);
+}
+void sendInFocusBoard() {
+  irsend.sendNEC(0x00FF30CF, 32); delay(100);
+  irsend.sendNEC(0x00FF30CF, 32); delay(100);
+  irsend.sendNEC(0x00FFCF30, 32); delay(100);
+}
+void sendHoverCam() {
+  irsend.sendNEC(0x00FFB04F, 32); delay(100);
+  irsend.sendNEC(0x00FFB04F, 32); delay(100);
+  irsend.sendNEC(0x00FF4FB0, 32); delay(100);
+}
+void sendIpevo() {
+  irsend.sendNEC(0x00FF708F, 32); delay(100);
+  irsend.sendNEC(0x00FF708F, 32); delay(100);
+  irsend.sendNEC(0x00FF8F70, 32); delay(100);
+}
+void sendOneScreen() {
+  irsend.sendNEC(0x00FFF00F, 32); delay(100);
+  irsend.sendNEC(0x00FFF00F, 32); delay(100);
+  irsend.sendNEC(0x00FF0FF0, 32); delay(100);
+}
+void sendAvocor() {
+  irsend.sendNEC(0x00FF08F7, 32); delay(100);
+  irsend.sendNEC(0x00FF08F7, 32); delay(100);
+  irsend.sendNEC(0x00FFF708, 32); delay(100);
+}
+void sendStarBoard() {
+  irsend.sendNEC(0x00FF8877, 32); delay(100);
+  irsend.sendNEC(0x00FF8877, 32); delay(100);
+  irsend.sendNEC(0x00FF7788, 32); delay(100);
+}
+void sendVibeBoard() {
+  irsend.sendNEC(0x00FF48B7, 32); delay(100);
+  irsend.sendNEC(0x00FF48B7, 32); delay(100);
+  irsend.sendNEC(0x00FFB748, 32); delay(100);
+}
 
 
 #include "utils.h"
@@ -175,6 +249,21 @@ const SmartBoardBrandTarget SmartBoardBrands[] = {
     REGISTER_TARGET(sendAbsen),
     REGISTER_TARGET(sendOptomaBoard),
     REGISTER_TARGET(sendELO),
+    REGISTER_TARGET(sendSmartDeck),
+    REGISTER_TARGET(sendTouchIT),
+    REGISTER_TARGET(sendGenee),
+    REGISTER_TARGET(sendHitachiBoard),
+    REGISTER_TARGET(sendPanasonicBoard),
+    REGISTER_TARGET(sendRecordex),
+    REGISTER_TARGET(sendQomo),
+    REGISTER_TARGET(sendTriumphBoard),
+    REGISTER_TARGET(sendInFocusBoard),
+    REGISTER_TARGET(sendHoverCam),
+    REGISTER_TARGET(sendIpevo),
+    REGISTER_TARGET(sendOneScreen),
+    REGISTER_TARGET(sendAvocor),
+    REGISTER_TARGET(sendStarBoard),
+    REGISTER_TARGET(sendVibeBoard),
 };
 
 const int numSmartBoardBrands = sizeof(SmartBoardBrands) / sizeof(SmartBoardBrands[0]);
