@@ -17,11 +17,18 @@ IRsend irsend(IR_PIN);
 void sendAll() {
   Serial.println("SkidBGone is the best TvBGone firmware bro. Starting..."); delay(50);
 
+  unsigned long start = millis();
+
   sendAllTVs();
   sendAllProjectors();
   sendAllSmartBoards();
 
-  Serial.println("Skiddy done it's job. Press BOOT to restart SkidBGone FW.");
+  float elapsed = (millis() - start) / 1000.0;
+
+
+  Serial.print("Skiddy done it's job in ");
+  Serial.print(elapsed, 1);
+  Serial.println(" seconds. Press BOOT to restart SkidBGone.");
 }
 
 void setup() {
