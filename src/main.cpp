@@ -12,6 +12,13 @@ IRsend irsend(IR_PIN);
 // skiddy's job job sahur
 void sendAll() {
   Serial.println(F("SkidBGone is the best TvBGone firmware bro. Starting..."));
+#ifdef M5STICKC_PLUS2
+  M5.Display.clear();
+  M5.Display.setCursor(0, 0);
+  M5.Display.setTextColor(GREEN);
+  M5.Display.println(F("Skiddy is working..."));
+  M5.Display.setTextColor(WHITE);
+#endif
   delay(100);
 
   unsigned long start = millis();
@@ -25,9 +32,25 @@ void sendAll() {
   Serial.print(F("Skiddy done it's job in "));
   Serial.print(elapsed, 1);
   Serial.println(F(" seconds. Press BOOT to restart SkidBGone."));
+
+#ifdef M5STICKC_PLUS2
+  M5.Display.clear();
+  M5.Display.setCursor(0, 0);
+  M5.Display.setTextColor(CYAN);
+  M5.Display.println(F("Skiddy done it's job!"));
+  M5.Display.printf("Time: %.1fs\n", elapsed);
+  M5.Display.println(F("\nPress Button A\nto restart."));
+#endif
 }
 
 void setup() {
+#ifdef M5STICKC_PLUS2
+  auto cfg = M5.config();
+  M5.begin(cfg);
+  M5.Display.setRotation(1);
+  M5.Display.setTextSize(1.5);
+#endif
+
   Serial.begin(115200);
   // Wait for Serial to initialize (ESP32-C3 USB-CDC)
   unsigned long serialWait = millis();
@@ -36,7 +59,11 @@ void setup() {
   irsend.begin();
   pinMode(BUTTON_PIN, INPUT_PULLUP);
   pinMode(LED_PIN, OUTPUT);
-  digitalWrite(LED_PIN, HIGH);
+#ifdef M5STICKC_PLUS2
+  digitalWrite(LED_PIN, LOW); // M5 IR LED is Active-High
+#else
+  digitalWrite(LED_PIN, HIGH); // Generic LED is usually Active-Low
+#endif
 
   Serial.println(F(""));
   Serial.println(F("   _____ __   _     ______  ______               "));
@@ -52,9 +79,24 @@ void setup() {
   Serial.println(F(""));
   Serial.println(F("  Skid are you ready? Yeah im ready bradar. Press BOOT to start."));
   Serial.println(F(""));
+
+#ifdef M5STICKC_PLUS2
+  M5.Display.setTextColor(WHITE);
+  M5.Display.println(F("SkidBGone v1.0"));
+  M5.Display.println(F("Ready to blast."));
+  M5.Display.println(F("\nPress Button A\nto start."));
+#endif
 }
 
 void loop() {
+#ifdef M5STICKC_PLUS2
+  M5.update();
+  if (M5.BtnA.wasPressed()) {
+      digitalWrite(LED_PIN, HIGH);
+      sendAll();
+      digitalWrite(LED_PIN, LOW);
+  }
+#else
   if (digitalRead(BUTTON_PIN) == LOW) {
     delay(50);
     if (digitalRead(BUTTON_PIN) == LOW) {
@@ -70,4 +112,5 @@ void loop() {
       delay(100);
     }
   }
+#endif
 }
