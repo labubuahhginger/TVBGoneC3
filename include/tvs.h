@@ -1,9 +1,7 @@
 #ifndef TVS_H
 #define TVS_H
 
-#include <Arduino.h>
-#include <IRremoteESP8266.h>
-#include <IRsend.h>
+#include "utils.h"
 
 extern IRsend irsend;
 
@@ -209,18 +207,7 @@ void sendCoocaa() {
   irsend.sendNEC(0xA25DC03F, 32); delay(35);
 }
 
-#include "utils.h"
-
-#ifndef REGISTER_TARGET
-#define REGISTER_TARGET(func) { #func, func }
-#endif
-
-struct TvBrandTarget {
-    const char* funcName;
-    void (*sendFunc)();
-};
-
-const TvBrandTarget TvBrands[] = {
+const BrandTarget TvBrands[] = {
     REGISTER_TARGET(sendSamsung),
     REGISTER_TARGET(sendLG),
     REGISTER_TARGET(sendSony),
@@ -261,19 +248,8 @@ const TvBrandTarget TvBrands[] = {
 
 const int numTvBrands = sizeof(TvBrands) / sizeof(TvBrands[0]);
 
-void sendAllTVs() {
-  Serial.println("Skiddy is turning off TVs... Every TV is cooked lol.");
-  for (int i = 0; i < numTvBrands; i++) {
-    Serial.print("[");
-    Serial.print(i + 1);
-    Serial.print("/");
-    Serial.print(numTvBrands);
-    Serial.print("] ");
-    printBrandName(TvBrands[i].funcName);
-    Serial.println();
-    TvBrands[i].sendFunc();
-    delay(80);
-  }
+bool sendAllTVs() {
+  return sendAllFromList(TvBrands, numTvBrands, "Skiddy is turning off TVs... Every TV is cooked lol.");
 }
 
 #endif

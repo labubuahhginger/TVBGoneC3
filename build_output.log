@@ -1,0 +1,132 @@
+Processing m5stick-c-plus2 (platform: espressif32; board: denky_d4; framework: arduino; monitor_speed: 115200; lib_deps: crankyoldgit/IRremoteESP8266 @ ^2.8.6; build_flags: -DM5STICKC_PLUS2=1)
+--------------------------------------------------------------------------------
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/denky_d4.html
+PLATFORM: Espressif 32 (7.0.1) > Denky D4 (PICO-V3-02)
+HARDWARE: ESP32 240MHz, 320KB RAM, 8MB Flash
+DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES:
+ - framework-arduinoespressif32 @ 3.20017.241212+sha.dcc1105b
+ - tool-esptoolpy @ 2.41100.0 (4.11.0)
+ - toolchain-xtensa-esp32 @ 8.4.0+2021r2-patch5
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 34 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- IRremoteESP8266 @ 2.9.0 (License: Unknown, Path: /app/.pio/libdeps/m5stick-c-plus2/IRremoteESP8266)
+Building in release mode
+<lambda>(["checkprogsize"], [".pio/build/m5stick-c-plus2/firmware.elf"])
+MethodWrapper(["checkprogsize"], [".pio/build/m5stick-c-plus2/firmware.elf"])
+Advanced Memory Usage is available via "PlatformIO Home > Project Inspect"
+RAM:   [=         ]   6.6% (used 21544 bytes from 327680 bytes)
+Flash: [==        ]  24.6% (used 322105 bytes from 1310720 bytes)
+.pio/build/m5stick-c-plus2/firmware.elf  :
+section                                                                                 size         addr
+.rtc.text                                                                                  0   1074528256
+.rtc.dummy                                                                                 0   1073217536
+.rtc.force_fast                                                                            0   1073217536
+.rtc_noinit                                                                               16   1342177792
+.rtc.force_slow                                                                            0   1342177808
+.iram0.vectors                                                                          1027   1074266112
+.iram0.text                                                                            61667   1074267140
+.dram0.data                                                                            16560   1073470304
+.ext_ram_noinit                                                                            0   1065353216
+.noinit                                                                                    0   1073486864
+.ext_ram.bss                                                                               0   1065353216
+.dram0.bss                                                                              4984   1073486864
+.flash.appdesc                                                                           256   1061158944
+.flash.rodata                                                                          90580   1061159200
+.flash.rodata_noload                                                                       0   1061249780
+.flash.text                                                                           152271   1074593824
+.iram0.text_end                                                                            1   1074328807
+.iram0.data                                                                                0   1074328808
+.iram0.bss                                                                                 0   1074328808
+.dram0.heap_start                                                                          0   1073491848
+.xt.prop                                                                              168996            0
+.xt.lit                                                                                 5536            0
+.xtensa.info                                                                              56            0
+.comment                                                                                 166            0
+.xt.lit._ZN5Print7printlnEPK19__FlashStringHelper                                          0            0
+.xt.lit._Z14printBrandNamePKc                                                              8            0
+.xt.lit._Z15sendAllFromListPK11BrandTargetiPKc                                             8            0
+.xt.prop._ZN5Print7printlnEPK19__FlashStringHelper                                        36            0
+.xt.prop._Z14printBrandNamePKc                                                           120            0
+.xt.prop._Z15sendAllFromListPK11BrandTargetiPKc                                          120            0
+.xt.prop._ZN14HardwareSerial9readBytesEPcj                                                36            0
+.xt.prop._ZNSt14_Function_baseD2Ev                                                        36            0
+.xt.prop._ZTV14HardwareSerial                                                             12            0
+.xt.lit._ZN5Print5writeEPKc                                                                0            0
+.xt.prop._ZN5Print5writeEPKc                                                              48            0
+.xt.lit._ZN6String4initEv                                                                  0            0
+.xt.prop._ZN6String4initEv                                                                36            0
+.xt.prop._ZNK6String3lenEv                                                                60            0
+.xt.prop._ZN6String6setLenEi                                                              72            0
+.xt.lit._ZN3nvs4Lock4initEv                                                                0            0
+.xt.prop._ZN3nvs4Lock4initEv                                                              72            0
+.xt.lit._ZN14intrusive_listIN3nvs7Storage14NamespaceEntryEE17clearAndFreeNodesEv           0            0
+.xt.prop._ZN14intrusive_listIN3nvs7Storage14NamespaceEntryEE17clearAndFreeNodesEv        108            0
+.xt.prop._ZN14intrusive_listIN3nvs7Storage14NamespaceEntryEE9push_backEPS2_               60            0
+.xt.lit._ZN3nvs12NVSPartitionD5Ev                                                          0            0
+.xt.prop._ZN3nvs12NVSPartitionD5Ev                                                         0            0
+.xt.prop._ZN3nvs12NVSPartitionD2Ev                                                        36            0
+.xt.prop._ZN3nvs12NVSPartitionD0Ev                                                        36            0
+.xt.prop._ZTVN3nvs12NVSPartitionE                                                         12            0
+.xt.lit._ZN3nvs19NVSPartitionManagerD5Ev                                                   0            0
+.xt.prop._ZN3nvs19NVSPartitionManagerD5Ev                                                  0            0
+.xt.prop._ZN3nvs19NVSPartitionManagerD2Ev                                                 36            0
+.xt.prop._ZN3nvs19NVSPartitionManagerD0Ev                                                 36            0
+.xt.prop._ZN14intrusive_listIN3nvs12NVSPartitionEE5eraseENS2_8iteratorE                   84            0
+.xt.prop._ZTVN3nvs19NVSPartitionManagerE                                                  12            0
+.xt.prop._ZN14intrusive_listIN3nvs8HashList13HashListBlockEE5eraseENS3_8iteratorE         84            0
+.xt.lit._ZN3nvs4ItemC5EhNS_8ItemTypeEhPKch                                                 0            0
+.xt.prop._ZN3nvs4ItemC5EhNS_8ItemTypeEhPKch                                                0            0
+.xt.prop._ZN3nvs20isVariableLengthTypeENS_8ItemTypeE                                      48            0
+.xt.prop._ZN3nvs4ItemC2EhNS_8ItemTypeEhPKch                                               60            0
+.xt.prop._ZNK19CompressedEnumTableIN3nvs4Page10EntryStateELj2ELj126EE3getEjPS2_           48            0
+.xt.lit._ZN14intrusive_listIN3nvs4PageEE5clearEv                                           0            0
+.xt.prop._ZN14intrusive_listIN3nvs4PageEE5clearEv                                         60            0
+.xt.prop._ZN14intrusive_listIN3nvs4PageEE9push_backEPS1_                                  60            0
+.xt.prop._ZN14intrusive_listIN3nvs4PageEE5eraseENS2_8iteratorE                            84            0
+.xt.prop._ZTISt9exception                                                                 12            0
+.xt.prop._ZTISt9bad_alloc                                                                 12            0
+.xt.prop._ZTVN10__cxxabiv120__si_class_type_infoE                                         12            0
+.xt.prop._ZTISt17bad_function_call                                                        12            0
+.xt.prop._ZTVSt17bad_function_call                                                        12            0
+.xt.prop._ZTVN10__cxxabiv117__class_type_infoE                                            12            0
+.xt.lit._ZNK9__gnu_cxx24__concurrence_lock_error4whatEv                                    8            0
+.xt.lit._ZNK9__gnu_cxx26__concurrence_unlock_error4whatEv                                  8            0
+.xt.lit._ZN9__gnu_cxx24__concurrence_lock_errorD5Ev                                        8            0
+.xt.lit._ZN9__gnu_cxx26__concurrence_unlock_errorD5Ev                                      8            0
+.xt.lit._ZN9__gnu_cxx7__mutex4lockEv                                                       8            0
+.xt.lit._ZN9__gnu_cxx13__scoped_lockD5Ev                                                   8            0
+.xt.prop._ZNK9__gnu_cxx24__concurrence_lock_error4whatEv                                  48            0
+.xt.prop._ZNK9__gnu_cxx26__concurrence_unlock_error4whatEv                                48            0
+.xt.prop._ZN9__gnu_cxx24__concurrence_lock_errorD5Ev                                      12            0
+.xt.prop._ZN9__gnu_cxx26__concurrence_unlock_errorD5Ev                                    12            0
+.xt.prop._ZN9__gnu_cxx7__mutex4lockEv                                                     48            0
+.xt.prop._ZN9__gnu_cxx13__scoped_lockD5Ev                                                 12            0
+.xt.prop._ZN9__gnu_cxx24__concurrence_lock_errorD2Ev                                      36            0
+.xt.prop._ZN9__gnu_cxx26__concurrence_unlock_errorD2Ev                                    36            0
+.xt.prop._ZN9__gnu_cxx24__concurrence_lock_errorD0Ev                                      36            0
+.xt.prop._ZN9__gnu_cxx26__concurrence_unlock_errorD0Ev                                    36            0
+.xt.prop._ZN9__gnu_cxx13__scoped_lockD2Ev                                                 72            0
+.xt.prop._ZTIN9__gnu_cxx24__concurrence_lock_errorE                                       12            0
+.xt.prop._ZTIN9__gnu_cxx26__concurrence_unlock_errorE                                     12            0
+.xt.prop._ZTVN9__gnu_cxx24__concurrence_lock_errorE                                       12            0
+.xt.prop._ZTVN9__gnu_cxx26__concurrence_unlock_errorE                                     12            0
+.debug_frame                                                                          142504            0
+.debug_info                                                                          8646541            0
+.debug_abbrev                                                                         514141            0
+.debug_loc                                                                            814432            0
+.debug_aranges                                                                         53328            0
+.debug_ranges                                                                         118112            0
+.debug_line                                                                          2083816            0
+.debug_str                                                                            479340            0
+Total                                                                               13356422
+========================= [SUCCESS] Took 4.12 seconds =========================
+
+Environment         Status    Duration
+------------------  --------  ------------
+esp32-c3-devkitm-1  IGNORED
+m5stick-c-plus2     SUCCESS   00:00:04.120
+========================= 1 succeeded in 00:00:04.120 =========================

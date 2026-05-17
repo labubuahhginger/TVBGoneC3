@@ -1,9 +1,7 @@
 #ifndef SMARTBOARDS_H
 #define SMARTBOARDS_H
 
-#include <Arduino.h>
-#include <IRremoteESP8266.h>
-#include <IRsend.h>
+#include "utils.h"
 
 extern IRsend irsend;
 
@@ -101,18 +99,7 @@ void sendELO() {
   irsend.sendNEC(0x04FB40BF, 32); delay(35);
 }
 
-#include "utils.h"
-
-#ifndef REGISTER_TARGET
-#define REGISTER_TARGET(func) { #func, func }
-#endif
-
-struct SmartBoardBrandTarget {
-    const char* funcName;
-    void (*sendFunc)();
-};
-
-const SmartBoardBrandTarget SmartBoardBrands[] = {
+const BrandTarget SmartBoardBrands[] = {
     REGISTER_TARGET(sendBarco),
     REGISTER_TARGET(sendChristie),
     REGISTER_TARGET(sendCanon),
@@ -135,19 +122,8 @@ const SmartBoardBrandTarget SmartBoardBrands[] = {
 
 const int numSmartBoardBrands = sizeof(SmartBoardBrands) / sizeof(SmartBoardBrands[0]);
 
-void sendAllSmartBoards() {
-  Serial.println("Smart desks are turning off, why? Only this skid knows.");
-  for (int i = 0; i < numSmartBoardBrands; i++) {
-    Serial.print("[");
-    Serial.print(i + 1);
-    Serial.print("/");
-    Serial.print(numSmartBoardBrands);
-    Serial.print("] ");
-    printBrandName(SmartBoardBrands[i].funcName);
-    Serial.println();
-    SmartBoardBrands[i].sendFunc();
-    delay(80);
-  }
+bool sendAllSmartBoards() {
+  return sendAllFromList(SmartBoardBrands, numSmartBoardBrands, "Smart desks are turning off, why? Only this skid knows.");
 }
 
 #endif
