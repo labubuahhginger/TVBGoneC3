@@ -32,15 +32,21 @@ jobs:
       - name: Build
         run: pio run
 
-      - name: Upload firmware artifact
+      - name: Prepare binaries
+        run: |
+          mkdir -p release_bin
+          cp .pio/build/esp32-c3-devkitm-1/firmware.bin release_bin/SkidBGone_ESP32C3.bin
+          cp .pio/build/m5stick-c-plus2/firmware.bin release_bin/SkidBGone_M5StickCPlus2.bin
+
+      - name: Upload binaries artifact
         uses: actions/upload-artifact@v4
         with:
-          name: firmware
-          path: .pio/build/esp32-c3-devkitm-1/firmware.bin
+          name: SkidBGone_Firmwares
+          path: release_bin/*.bin
 
       - name: Release
         if: startsWith(github.ref, 'refs/tags/v')
         uses: softprops/action-gh-release@v2
         with:
           name: "SkidBGone ${{ github.ref_name }}"
-          files: .pio/build/esp32-c3-devkitm-1/firmware.bin
+          files: release_bin/*.bin
