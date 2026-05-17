@@ -1,9 +1,7 @@
 #ifndef PROJECTORS_H
 #define PROJECTORS_H
 
-#include <Arduino.h>
-#include <IRremoteESP8266.h>
-#include <IRsend.h>
+#include "utils.h"
 
 extern IRsend irsend;
 
@@ -146,18 +144,7 @@ void sendDangbei() {
   irsend.sendNEC(0xF50AC03F, 32); delay(35);
 }
 
-#include "utils.h"
-
-#ifndef REGISTER_TARGET
-#define REGISTER_TARGET(func) { #func, func }
-#endif
-
-struct ProjectorBrandTarget {
-    const char* funcName;
-    void (*sendFunc)();
-};
-
-const ProjectorBrandTarget ProjectorBrands[] = {
+const BrandTarget ProjectorBrands[] = {
     REGISTER_TARGET(sendBenQ),
     REGISTER_TARGET(sendEpson),
     REGISTER_TARGET(sendOptoma),
@@ -187,19 +174,8 @@ const ProjectorBrandTarget ProjectorBrands[] = {
 
 const int numProjectorBrands = sizeof(ProjectorBrands) / sizeof(ProjectorBrands[0]);
 
-void sendAllProjectors() {
-  Serial.println("Wtf projectors are turning off, why? Skiddy turned it off bro.");
-  for (int i = 0; i < numProjectorBrands; i++) {
-    Serial.print("[");
-    Serial.print(i + 1);
-    Serial.print("/");
-    Serial.print(numProjectorBrands);
-    Serial.print("] ");
-    printBrandName(ProjectorBrands[i].funcName);
-    Serial.println();
-    ProjectorBrands[i].sendFunc();
-    delay(80);
-  }
+bool sendAllProjectors() {
+  return sendAllFromList(ProjectorBrands, numProjectorBrands, "Wtf projectors are turning off, why? Skiddy turned it off bro.");
 }
 
 #endif
