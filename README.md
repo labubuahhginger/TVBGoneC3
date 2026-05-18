@@ -20,7 +20,7 @@
 **SkidBGone** is a TV-B-Gone firmware for the **ESP32-C3 SuperMini** and **M5StickC Plus2**. One button press and Skiddy goes to work — blasting IR codes at everything in sight.
 
 [![CI](https://github.com/labubuahhginger/SkidBGone/actions/workflows/build.yml/badge.svg)](https://github.com/labubuahhginger/SkidBGone/actions)
-![Platform](https://img.shields.io/badge/platform-ESP32%20%7C%20C3%20%7C%20S3-red?logo=espressif)
+![Platform](https://img.shields.io/badge/platform-ESP32%20%7C%20C3-red?logo=espressif)
 ![Framework](https://img.shields.io/badge/framework-Arduino-teal?logo=arduino)
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Devices](https://img.shields.io/badge/devices-79-blueviolet)
@@ -75,7 +75,8 @@ DAT             →  GPIO3
 
 ### Option 2: M5StickC Plus2
 - **No external hardware required** (uses built-in IR LED).
-- **Display support**: Shows real-time progress and brand names.
+- **MCU**: ESP32-PICO-V3-02 (240MHz Dual Core, 8MB Flash).
+- **Display support**: Shows real-time progress and brand names on the 1.14" LCD.
 - **Configurable Output**: Choose between internal IR or external pins via menu.
 
 ---
@@ -94,15 +95,6 @@ DAT             →  GPIO3
 3. **Settings**: Press **Button B** (side) to select IR output pin (Internal, Header, or Grove).
 4. During blasting, current brand and progress are shown on the LCD.
 5. Press **Button A** to interrupt.
-
----
-
-## ⚠️ Flashing Note for M5StickC Plus2
-
-The M5StickC Plus2 has two hardware variants (ESP32-PICO and ESP32-S3).
-- If you get an **"invalid header"** error after flashing, try the other binary.
-- Flash at offset `0x10000` for ESP32 and `0x0` for ESP32-C3/S3 depending on your tool.
-- Using [skiddysflasher](https://labubuahhginger.github.io/skiddysflasher) is recommended as it handles offsets automatically.
 
 ---
 
@@ -143,7 +135,7 @@ No PlatformIO needed. Flash Skiddy straight from your browser:
 
 👉 **[skiddysflasher](https://labubuahhginger.github.io/skiddysflasher)**
 
-Works on Chrome/Edge with Web Serial API. Just plug in your ESP32-C3/S3/M5 and hit Flash.
+Works on Chrome/Edge with Web Serial API. Just plug in your ESP32-C3 or M5StickC and hit Flash.
 
 ---
 
@@ -159,11 +151,8 @@ cd SkidBGone
 # Build for C3
 pio run -e esp32-c3-devkitm-1
 
-# Build for M5 (ESP32 variant)
+# Build for M5StickC Plus2
 pio run -e m5stick-c-plus2
-
-# Build for M5 (S3 variant)
-pio run -e m5stick-c-plus2-s3
 ```
 
 ---
@@ -181,7 +170,7 @@ SkidBGone/
 │   └── main.cpp              # The runner — Skiddy lives here
 ├── .github/
 │   └── workflows/
-│       └── build.yml         # CI — builds all binaries
+│       └── build.yml         # CI — builds both binaries
 ├── platformio.ini
 └── README.md
 ```

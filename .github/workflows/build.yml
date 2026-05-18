@@ -35,15 +35,8 @@ jobs:
       - name: Prepare binaries
         run: |
           mkdir -p release_bin
-
-          # C3
           cp .pio/build/esp32-c3-devkitm-1/firmware.bin release_bin/SkidBGone_ESP32C3.bin
-
-          # M5StickC Plus2 (ESP32 version)
-          cp .pio/build/m5stick-c-plus2/firmware.bin release_bin/SkidBGone_M5StickCPlus2_ESP32.bin
-
-          # M5StickC Plus2 (S3 version)
-          cp .pio/build/m5stick-c-plus2-s3/firmware.bin release_bin/SkidBGone_M5StickCPlus2_S3.bin
+          cp .pio/build/m5stick-c-plus2/firmware.bin release_bin/SkidBGone_M5StickCPlus2.bin
 
       - name: Upload binaries artifact
         uses: actions/upload-artifact@v4
